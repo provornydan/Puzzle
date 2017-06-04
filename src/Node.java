@@ -140,8 +140,28 @@ public class Node {
         }
     }
 
+    public static boolean stateEqual(Node n1, Node n2)
+    {
+
+        int [][] a = n1.getState();
+        int [][] b = n2.getState();
+        int mize = n1.size;
+
+        for(int i = 0; i<mize; i++)
+        {
+            for(int j=0; j<mize; j++)
+            {
+                if(a[i][j] != b[i][j])
+                    return false;
+            }
+        }
+        return true;
+    }
+
     public void toStr()
     {
+        System.out.println("My ID = "+ID_name);
+        System.out.println("Parent ID = "+ID_parent);
         System.out.println("G(x) = " + gx);
         System.out.println("H(x) = " + hx);
         System.out.println("F(X) = " + fx);

@@ -5,6 +5,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Scanner;
 
 /**
  * Created by cmiron on 5/24/17.
@@ -190,4 +191,11 @@ public class Parser {
         }
         return true;
     }
+
+    public static void promptEnterKey(){
+        System.out.println("Press \"ENTER\" to continue...");
+        Scanner scanner = new Scanner(System.in);
+        scanner.nextLine();
+    }
+
 }
